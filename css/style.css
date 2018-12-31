@@ -403,6 +403,10 @@ i.fa-search {
   .nav__tabs--right {
     text-align: center; } }
 
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .section1__text-box {
+    padding: 0; } }
+
 @media only screen and (min-width: 768px) {
   .nav .tab--normal {
     display: inline-block;
