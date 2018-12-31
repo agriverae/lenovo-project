@@ -212,7 +212,7 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
   &__heading {
     display: inline-block;
     text-transform: capitalize;
-    margin-top: 80%;
+    margin-top: 40%;
     font-weight: 300;
     font-size: 4.5rem;
     line-height: 2.8rem;
@@ -643,6 +643,10 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
 
 
 @media only screen and (min-width: 1200px) {
+
+  .section1__heading {
+    margin-top: 80%;
+  }
 
   .u-float-left-1-4 {
     width: 24%;
