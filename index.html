@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="scripts/index.js"></script>
     <title>Lenovo Project</title>
   </head>
   <body>
@@ -20,24 +21,31 @@
             <li class="nav__tab tab--normal">Deals</li>
             <li class="nav__tab tab--normal">Support</li>
           </ul>
+          <ul class="nav__icon" href="javascript:void(0);" onclick="myFunction()">
+              <li><i class="fa fa-bars fa-2x"></i></li>
+          </ul>
           <ul class="nav__tabs nav__tabs--right">
             <div class="block pr5">
-              <li class="block__tab">sales</li>
-              <li class="block__tab">1-855-253-6698</li>
-              <li class="block__tab"><img src="images/chat.png" alt="Chat"></li>
-              <li class="block__tab">E-mail</li>
-              <li class="block__tab">Sign-up</li>
+              <li class="block__tab block__tab--no-mobile">Sales 1-855-253-6698</li>
+              <li class="block__tab"><img class="block__tab__chat" src="images/chat.png" alt="Chat"></li>
+              <li class="block__tab"><i class="far fa-envelope"></i><p class="block__text">E-mail</p></li>
+              <li class="block__tab"><i class="fas fa-user-edit"></i><p class="block__text">Sign-up</p></li>
             </div>
             <div class="block pr1">
-                <li class="block__tab"><i class="fas fa-briefcase"></i> For Work</li>
-                <li class="block__tab"><i class="fas fa-users"></i> Community</li>
+                <li class="block__tab"><i class="fas fa-briefcase"></i><p class="block__text">For Work</p></li>
+                <li class="block__tab"><i class="fas fa-users"></i><p class="block__text">Community</p></li>
                 <li class="block__tab"><i class="fas fa-user"></i></li>
                 <li class="block__tab"><i class="fas fa-shopping-cart"></i></li>
-                <li class="block__tab wrapper"><i class="fas fa-xm fa-search"></i><input name="search" type="text" placeholder="Search"></li>
+                <li class="block__tab wrapper block__tab--no-mobile"><i class="fas fa-xm fa-search"></i><input name="search" type="text" placeholder="Search"></li>
               </div>
           </ul>
         </nav>
         <div style="clear: both;"></div>
+          <ul id="nav__mobile" class="nav__mobile">
+            <li>Products</li>
+            <li>Deals</li>
+            <li>Support</li>
+          </ul>
       </header>
       <main>
         <section class="thinkpad">
@@ -205,11 +213,10 @@
             </div>
             <div class="products__product u-float-left-1-4">
               <div class="products__product-image-box">
-                <img src="images/thinkPad-T470s.svg" alt="ThinkPad T470s" class="products__product-image">
+                <img src="images/ThinkPad_T470s.png" alt="ThinkPad T470s" class="products__product-image">
               </div>
               <h1 class="products__product-heading">ThinkPad T470s</h1>
-              <p class="products__product-description">Light and thin, the ThinkPad T470s is designed to boost productivity, wherever your.
-                  business takes you.</p>
+              <p class="products__product-description">Light and thin, the ThinkPad T470s is designed to boost productivity, wherever your.</p>
               <div class="products__product-stars-box">
                 <img src="images/stars.svg" alt="Stars" class="products__product-stars">
               </div>

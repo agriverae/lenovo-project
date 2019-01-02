@@ -30,9 +30,15 @@ body {
   line-height: 1.7;
 }
 
+header {
+  position: fixed;
+  width: 100%;
+  height: 11.4rem;
+}
+
 .block {
   display: inline-block;
-  width: 100%;
+  // width: 100%;
   height: 50%;
   color: #808080;
 
@@ -43,6 +49,19 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     margin-right: 1rem;
+
+    &--no-mobile {
+      display: none;
+    }
+
+    &__chat {
+      margin-bottom: -7px;
+    }
+
+  }
+
+  &__text {
+    display: none;
   }
 }
 
@@ -59,26 +78,69 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
 
 .pr {
   &1 {
-    padding-right: 1rem;
+    padding-right: 0rem;
   }
 
   &5 {
-    padding-right: 5rem;
+    // padding-right: 5rem;
+    padding-right: 0rem;
   }
 }
 
 .nav {
   background-color: #fff;
-  height: 6rem;
+  // height: 6rem;
+  position: relative;
+
+  &__mobile {
+    opacity: 0.5;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    background-color: $dark-font-color;
+    color: $light-font-color;
+    width: 100%;
+    transition: .3s all ease;
+
+    & > * {
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        background-color: $light-font-color;
+        color: $dark-font-color;
+        cursor: pointer;
+        transition: .3s all ease;
+      }
+    }
+
+    &--open {
+      opacity: 1;
+      max-height: 100%;
+    }
+
+  }
 
   @include clearfix();
 
   &__logo-box {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 10%;
   }
+
+  &__icon {
+    padding: 0 0.5rem;
+    display: inline-block;
+    cursor: pointer;
+    float: left;
+
+    &:hover {
+      background-color: #808080;
+    }
+  }
+
 
   &__tabs {
     list-style-type: none;
@@ -88,14 +150,18 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
     float: left;
 
     &--left{
-      width: 100%;
-      padding-left: 6.5rem;
+      width: 20%;
+      padding-left: 1rem;
+      display: none;
     }
 
     &--right{
-      width: 100%;
-      padding-left: 7.5rem;
-      text-align: left;
+      width: 90%;
+      // width: 80%;
+      // padding-left: 7.5rem;
+      // text-align: left;
+      padding-left: 1rem;
+      text-align: right;
     }
   }
 
@@ -114,7 +180,6 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
   .tab {
 
     &--normal {
-      display: block;
       height: 2.8rem;
     }
 
@@ -122,6 +187,12 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
       padding: .85rem .8rem;
     }
 
+  }
+
+  &--open {
+    display: block;
+    position: absolute;
+    bottom: 0;
   }
 
 }
@@ -133,6 +204,7 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
   background:#ececec;
 
   width: 100%;
+  padding-top: 3.5rem;
 
   &__tablet-image-box {
     width: 100%;
@@ -146,7 +218,7 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
   &__heading {
     color: #494949;
     font-family: Lato;
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-weight: 300;
     line-height: 1.5rem;
     text-transform: uppercase;
@@ -158,11 +230,11 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
     color: #212121;
     font-size: 2rem;
     font-weight: 300;
-    line-height: 2.8rem;
+    line-height: 2.6rem;
   }
 
   &__btn-text {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 2.9rem;
     text-transform: uppercase;
@@ -186,7 +258,7 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
   &__tablet-image-i3 {
     padding-right: 2%;
     padding-top: 3%;
-    width: 23rem;
+    width: 20rem;
   }
 
  }
@@ -591,13 +663,6 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
   margin-bottom: 1.5rem;;
 }
 
-@media only screen and (min-width: 600px) {
-
-  .nav__tabs--right {
-    text-align: center;
-  }
-}
-
 @media only screen and (min-width: 768px) {
 
   .nav .tab--normal {
@@ -648,6 +713,11 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
     margin-top: 35%;
   }
 
+  .u-float-left-1-3 {
+    width: 30%;
+    margin-bottom: 1%;
+  }
+
   .u-float-left-1-4 {
     width: 24%;
 
@@ -675,10 +745,6 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
 }
 
 @media only screen and (min-width: 1700px) {
-  .u-float-left-1-3 {
-    width: 30%;
-    margin-bottom: 1%;
-  }
 
   .section3__content-box {
     padding: 7% 5% 0 23%;
