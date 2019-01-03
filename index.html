@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="container">
-      <header>
+      <header class="header">
         <nav class="nav">
           <div class="nav__logo-box">
             <img src="images/logo.png" alt="Logo Lenovo" class="nav__logo">
@@ -22,14 +22,15 @@
             <li class="nav__tab tab--normal">Support</li>
           </ul>
           <ul class="nav__icon" href="javascript:void(0);" onclick="myFunction()">
-              <li><i class="fa fa-bars fa-2x"></i></li>
+              <li class="nav__icon--mobile"><i class="fa fa-bars fa-2x"></i></li>
+              <li class="nav__icon--tablet"><i class="fa fa-bars fa-3x"></i></li>
           </ul>
           <ul class="nav__tabs nav__tabs--right">
             <div class="block pr5">
               <li class="block__tab block__tab--no-mobile">Sales 1-855-253-6698</li>
               <li class="block__tab"><img class="block__tab__chat" src="images/chat.png" alt="Chat"></li>
-              <li class="block__tab"><i class="far fa-envelope"></i><p class="block__text">E-mail</p></li>
-              <li class="block__tab"><i class="fas fa-user-edit"></i><p class="block__text">Sign-up</p></li>
+              <li class="block__tab"><i class="block__tab--no-tablet fas fa-envelope"></i><p class="block__text">E-mail</p></li>
+              <li class="block__tab"><i class="block__tab--no-tablet fas fa-user-edit"></i><p class="block__text">Sign-up</p></li>
             </div>
             <div class="block pr1">
                 <li class="block__tab"><i class="fas fa-briefcase"></i><p class="block__text">For Work</p></li>
