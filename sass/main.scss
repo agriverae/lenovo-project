@@ -73,8 +73,6 @@ input {
   padding-right: -2rem;
 }
 
-i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
-
 .pr {
   &1 {
     padding-right: 0rem;
@@ -91,6 +89,31 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
   // height: 6rem;
   position: relative;
 
+  &__search {
+    opacity: 0.5;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    transition: .3s all ease;
+    z-index: 5;
+
+    &--open {
+      opacity: 1;
+      max-height: 100%;
+    }
+
+    &-box {
+      background-color: $light-font-color;
+
+      & input {
+        width: 98%;
+        margin-left: 0.5rem;
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
   &__mobile {
     opacity: 0.5;
     max-height: 0;
@@ -100,6 +123,7 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
     color: $light-font-color;
     width: 100%;
     transition: .3s all ease;
+    z-index: 10;
 
     & > * {
       padding: 0.5rem 1rem;
@@ -665,6 +689,8 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
 
 @media only screen and (min-width: 768px) {
 
+  i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
+
   .nav .tab--normal {
     display: inline-block;
     padding: 1.7rem 1.6rem;
@@ -689,6 +715,14 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
     &__tabs--left {
       width: 40%;
       padding-left: 6.5rem;
+    }
+
+    &__mobile {
+      width: 50%;
+    }
+
+    &__search {
+      display: none;
     }
   }
 
@@ -749,6 +783,10 @@ i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
 
     &__logo-box{
       display: block;
+    }
+
+    &__mobile {
+      display: none;
     }
 
     &__tabs {

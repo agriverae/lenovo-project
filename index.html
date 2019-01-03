@@ -21,7 +21,7 @@
             <li class="nav__tab tab--normal">Deals</li>
             <li class="nav__tab tab--normal">Support</li>
           </ul>
-          <ul class="nav__icon" href="javascript:void(0);" onclick="myFunction()">
+          <ul class="nav__icon" onclick="toggleNavbar()">
               <li class="nav__icon--mobile"><i class="fa fa-bars fa-2x"></i></li>
               <li class="nav__icon--tablet"><i class="fa fa-bars fa-3x"></i></li>
           </ul>
@@ -37,7 +37,7 @@
                 <li class="block__tab"><i class="fas fa-users"></i><p class="block__text">Community</p></li>
                 <li class="block__tab"><i class="fas fa-user"></i></li>
                 <li class="block__tab"><i class="fas fa-shopping-cart"></i></li>
-                <li class="block__tab wrapper block__tab--no-mobile"><i class="fas fa-xm fa-search"></i><input name="search" type="text" placeholder="Search"></li>
+                <li class="block__tab wrapper" onclick="toggleSearch()"><i class="fas fa-xm fa-search"></i><input class="block__tab--no-mobile" name="search" type="text" placeholder="Search"></li>
               </div>
           </ul>
         </nav>
@@ -46,6 +46,11 @@
             <li>Products</li>
             <li>Deals</li>
             <li>Support</li>
+          </ul>
+          <ul id="nav__search" class="nav__search">
+            <div class="nav__search-box">
+              <input type="text" name="search" placeholder="Search">
+            </div>
           </ul>
       </header>
       <main>
