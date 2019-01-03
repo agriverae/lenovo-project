@@ -244,21 +244,22 @@ input {
     font-family: Lato;
     font-size: 4rem;
     font-weight: 300;
-    line-height: 1.5rem;
+    line-height: 1.25rem;
     text-transform: uppercase;
     margin: 0 auto;
     margin-bottom: 1.5rem;
+    padding-bottom: .5rem;
   }
 
   &__sub-heading {
     color: #212121;
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 300;
-    line-height: 2.6rem;
+    line-height: 2.4rem;
   }
 
   &__btn-text {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 400;
     line-height: 2.9rem;
     text-transform: uppercase;
@@ -297,7 +298,7 @@ input {
   &__text-box {
     text-align: center;
     display: block;
-    margin-left: 18%;
+    margin: 0 auto;
     background-color: rgba(59, 140, 220, 0.9);
     height: 100%;
     width: 60%;
@@ -310,15 +311,15 @@ input {
     text-transform: capitalize;
     margin-top: 5%;
     font-weight: 300;
-    font-size: 4.5rem;
-    line-height: 2.8rem;
+    font-size: 4rem;
+    line-height: 2.5rem;
   }
   
   &__content-text {
     display: block;
     margin-top: 5%;
-    font-size: 3rem;
-    line-height: 3.3rem;
+    font-size: 2.6rem;
+    line-height: 3rem;
   }
 
 }
@@ -340,13 +341,14 @@ input {
 
   &__title-text {
     display: inline-block;
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 300;
-    line-height: 2.8rem;
+    line-height: 2.5rem;
     margin-right: 1rem;
   }
 
   &__title-image {
+    width: 75%;
     vertical-align: middle;
   }
 
@@ -359,9 +361,9 @@ input {
     margin-bottom: 15%;
 
     &__heading {
-      font-size: 4rem;
+      font-size: 3.6rem;
       font-weight: 300;
-      line-height: 2.8rem;
+      line-height: 2.6rem;
       padding-bottom: 3.5rem;
     }
 
@@ -655,6 +657,10 @@ input {
 
   &--yellow {
     background-color: #ffc82e;
+    width: 23.5rem;
+    height: 4.5rem;
+    border-radius: .5rem;
+    border: 1px solid #d48e08;
   }
 
   &--blue {
@@ -684,20 +690,23 @@ input {
 }
 
 .mb-small {
-  margin-bottom: 1.5rem;;
+  margin-bottom: 3rem;;
 }
 
 @media only screen and (min-width: 768px) {
 
   i.fa-search { position: absolute; top: 7.7px; left: 3.3px; }
 
-  .nav .tab--normal {
-    display: inline-block;
-    padding: 1.7rem 1.6rem;
-    height: unset;
-  }
-
   .nav {
+
+    padding: .5rem 0;
+
+    & .tab--normal {
+      display: inline-block;
+      padding: 1.7rem 1.6rem;
+      height: unset;
+    }
+
     &__tabs--right {
       width: 89%;
       padding-left: 0;
@@ -728,10 +737,52 @@ input {
 
   .thinkpad{
     padding-top: 5.4rem;
+
+    &__heading {
+      font-size: 6.1rem;
+      line-height: 1.5rem;
+    }
+  
+    &__sub-heading {
+      font-size: 2.8rem;
+      line-height: 2.8rem;
+    }
   }
 
-  .section1__text-box {
-    width: 47%;
+  .section1 {
+    &__text-box {
+      width: 47%;
+    }
+
+    &__heading {
+      font-size: 4.5rem;
+      line-height: 2.8rem;
+    }
+    
+    &__content-text {
+      font-size: 3rem;
+      line-height: 3.3rem;
+    }
+  }
+
+  .section2 {
+    &__title-text {
+      font-size: 5rem;
+      line-height: 2.8rem;
+    }
+  
+    &__title-image {
+      width: 100%;
+    }
+
+    &__article {
+
+      &__heading {
+        font-size: 4rem;
+        line-height: 2.8rem;
+      }
+    }
+  
   }
 
   .u-float-left-1-4 {
@@ -767,6 +818,10 @@ input {
       &--no-mobile {
         display: inline-block;
       }
+
+      &--desktop {
+        margin-right: .5rem;
+      }
     }
   }
   
@@ -776,6 +831,7 @@ input {
 @media only screen and (min-width: 1200px) {
 
   .nav {
+    padding: .25rem 0;
 
     &__icon {
       display: none;
@@ -812,11 +868,13 @@ input {
   }
 
   .u-float-left-1-4 {
-    width: 24%;
+    width: 24.5%;
 
     &:not(:last-child) {
       border-right: 1px solid $dark-font-color;
       padding-top: 4rem;
+      padding-left: 0.2rem;
+      padding-right: 0.2rem;
     }
   }
 
