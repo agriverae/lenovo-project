@@ -291,19 +291,18 @@ input {
 .section1 {
   background-image: url("../images/section1.png"); 
   background-size: cover;
-  background-position: 45% 73%;
-  height: 80vh;
+  background-position: center center;
   z-index: 20;
 
   &__text-box {
     text-align: center;
     display: block;
-    margin: 0 auto;
+    margin-left: 5%;
     background-color: rgba(59, 140, 220, 0.9);
     height: 100%;
     width: 60%;
     color: $light-font-color;
-    padding: 0 1.5%;
+    padding: 1rem 1.5%;
   }
 
   &__heading {
@@ -311,15 +310,15 @@ input {
     text-transform: capitalize;
     margin-top: 5%;
     font-weight: 300;
-    font-size: 4rem;
-    line-height: 2.5rem;
+    font-size: 3.5rem;
+    line-height: 2rem;
   }
   
   &__content-text {
     display: block;
     margin-top: 5%;
-    font-size: 2.6rem;
-    line-height: 3rem;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
   }
 
 }
@@ -750,6 +749,9 @@ input {
   }
 
   .section1 {
+    background-position: 45% 73%;
+    height: 80vh;
+
     &__text-box {
       width: 47%;
     }
@@ -831,7 +833,8 @@ input {
 @media only screen and (min-width: 1200px) {
 
   .nav {
-    padding: .25rem 0;
+    margin: 0;
+    padding: 0;
 
     &__icon {
       display: none;
@@ -858,8 +861,14 @@ input {
 
   }
 
-  .section1__heading {
-    margin-top: 35%;
+  .section1 {
+    &__heading {
+      margin-top: 35%;
+    }
+
+    &__text-box {
+      margin-left: 15%;
+    }
   }
 
   .u-float-left-1-3 {
